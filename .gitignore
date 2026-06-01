@@ -1,0 +1,74 @@
+# ─── Python ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# ─── Virtual environment ─────────────────────────
+venv/
+.env
+env/
+.env.local
+
+# ─── Testing ─────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.coverage
+coverage.xml
+
+# ─── IDE / Editor ────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.vs/
+*.sublime-workspace
+*.sublime-project
+
+# ─── AI tool configs ─────────────────────────────
+.continue/
+.continueignore
+.copilotignore
+.cursorignore
+.cursor/
+
+# ─── OS ──────────────────────────────────────────
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# ─── Database ────────────────────────────────────
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+# ─── Generated files ─────────────────────────────
+*.pdf
+*.csv
+*.xlsx
+output/
+exports/
+invoices/
+
+# ─── Logs ────────────────────────────────────────
+*.log
+log/
+logs/
+
+# ─── IDE config (project-specific) ───────────────
+.history/
+
+# ─── OpenCode ────────────────────────────────────
+AGENTS.md
