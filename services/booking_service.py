@@ -416,6 +416,9 @@ def switch_room(booking_id: int, old_room_id: int, new_room_id: int,
     new_room = room_model.get_room(new_room_id)
     if not new_room:
         return {"ok": False, "error": "Không tìm thấy phòng mới."}
+    # Kiểm tra phòng mới có đang dọn dẹp không   <-- thêm mới
+    if new_room["housekeeping"] == STATUS_DIRTY:
+        return {"ok": False, "error": f"Phòng {new_room['room_number']} đang được dọn dẹp, chưa thể chuyển vào."}
 
     old_room = room_model.get_room(old_room_id)
     if not old_room:

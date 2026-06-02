@@ -452,9 +452,9 @@ def update_active_room_charge(booking_id, room_id, room_number, room_type_id,
     try:
         active = conn.execute(
             """SELECT id FROM RoomChargeHistory
-               WHERE booking_id=? AND end_date IS NULL
-               ORDER BY start_date DESC LIMIT 1""",
-            (booking_id,)
+                WHERE booking_id=? AND room_id=? AND end_date IS NULL
+                ORDER BY start_date DESC LIMIT 1""",
+            (booking_id, room_id)   # <-- thêm room_id
         ).fetchone()
         if active:
             conn.execute(
